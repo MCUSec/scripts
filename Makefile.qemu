@@ -32,7 +32,7 @@ qemu-debug qemu-release:
 # QEMU #
 ########
 
-QEMU_TARGETS=i386-softmmu,x86_64-softmmu
+QEMU_TARGETS=i386-softmmu,x86_64-softmmu,arm-softmmu
 
 QEMU_CONFIGURE_FLAGS = --prefix=$(S2E_PREFIX)        \
                        --target-list=$(QEMU_TARGETS) \
@@ -44,6 +44,8 @@ QEMU_CONFIGURE_FLAGS = --prefix=$(S2E_PREFIX)        \
                        --disable-libiscsi            \
                        --disable-docs                \
                        --disable-spice               \
+                       --disable-strip               \
+                       --enable-debug                \
                        $(EXTRA_QEMU_FLAGS)
 
 QEMU_DEBUG_FLAGS = --enable-debug
