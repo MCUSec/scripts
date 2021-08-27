@@ -4,7 +4,7 @@ if [ ! -d "../build" ]; then
 	mkdir -p ../build
 fi
 
-if [ ! -f "/usr/include/x86_64-linux-gnu/asm/ptracearm.h"]; then
+if [ ! -f "/usr/include/x86_64-linux-gnu/asm/ptracearm.h" ]; then
 	sudo cp misc/ptracearm.h /usr/include/x86_64-linux-gnu/asm
 fi
 
@@ -28,7 +28,7 @@ sudo apt-get install -y software-properties-common gcc-9 g++-9
 
 chmod +x ../s2e-ratava/libs2e/configure
 cd ../build
-mkdir -f ../Makefile && make -f ../Makefile install
+make -f ../Makefile && make -f ../Makefile install
 
 # finalize
 
