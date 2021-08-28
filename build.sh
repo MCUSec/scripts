@@ -31,7 +31,5 @@ cd ../build
 make -f ../Makefile && make -f ../Makefile install
 
 # finalize
-
-cd ..
-cp misc/library.lua misc/uEmu-config.lua misc/launch-uEmu.sh .
+cp ../scripts/misc/library.lua ../scripts/misc/uEmu-config.lua ../scripts/misc/launch-uEmu.sh ../
 
