@@ -6,11 +6,12 @@
 # arguments can be passed to this script at run time.
 #
 
-#uEmu_DIR="/home/jiameng/Projects/uEmu"
 BUILD_DIR="$uEmuDIR/build"
 BUILD=release
 INSTALL_DIR="$BUILD_DIR/libs2e-$BUILD/arm-s2e-softmmu"
-FIRMWARE="samples/cm3.elf"
+
+# TODO: specify a target firmware
+FIRMWARE="$uEmuDIR/samples/helloworld.elf"
 
 # Comment this out to enable QEMU GUI
 GRAPHICS=-nographic

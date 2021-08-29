@@ -53,8 +53,10 @@ dofile('library.lua')
 
 add_plugin("RatavaDump")
 pluginsConfig.RatavaDump = {
- 	outputTracePath = "/home/jiameng/Projects",
-    traceEndPoint = 0x6d0,
+    -- TODO: specify the output path of tracing log
+    outputTracePath = "/path/to/output",
+    -- TODO: specify an end point in which switch the exploration path
+    traceEndPoint = 0x5f6,
     dev1 = {
         mmio = {
            {0xE0000000, 0xE00FFFFF},
@@ -68,16 +70,11 @@ pluginsConfig.RatavaDump = {
     }
 }
 
-add_plugin("BasicBlockCoverage")
-
-add_plugin("ControlFlowGraph")
-
-add_plugin("BaseInstructions")
-
 add_plugin("Vmi")
 pluginsConfig.Vmi = {
     baseDirs = {
-        "/home/jiameng/Projects"
+	-- TODO: specify a path of Vmi base
+        "/path/to/VmiBaseDirs"
     }
 }
 
